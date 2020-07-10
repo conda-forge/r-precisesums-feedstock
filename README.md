@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=PreciseSums
 
 Package license: GPL-2
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Most of the time floating point arithmetic does approximately the right thing.  When adding sums or having products of numbers that greatly differ in magnitude, the floating point arithmetic may be incorrect.  This package implements the Kahan (1965) sum <doi:10.1145/363707.363723>, Neumaier (1974) sum <doi:10.1002/zamm.19740540106>, pairwise-sum (adapted from 'NumPy', See Castaldo (2008) <doi:10.1137/070679946> for a discussion of accuracy), and arbitrary precision sum (adapted from the fsum in 'Python' ; Shewchuk (1997) <http://www.cs.berkeley.edu/~jrs/papers/robustr.pdf>).  In addition, products are changed to long double precision for accuracy, or changed into a log-sum for accuracy.
 
