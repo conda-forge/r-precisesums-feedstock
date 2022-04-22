@@ -3,7 +3,7 @@ About r-precisesums
 
 Home: https://CRAN.R-project.org/package=PreciseSums
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-precisesums-feedstock/blob/main/LICENSE.txt)
 
