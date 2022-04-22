@@ -1,4 +1,4 @@
-{% set version = "0.4" %}
+{% set version = "0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PreciseSums_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PreciseSums/PreciseSums_{{ version }}.tar.gz
-  sha256: bd5ac0c49dd34ecb62970437408a678cbef0c3ef4d43c1c9c1d9973838419e14
+  sha256: fa6a59a2bf6bb8d1b43c1b94bdb1895d8c8fc159552f308a39d0317409dc93a2
 
 build:
   merge_build_host: true  # [win]
@@ -28,6 +28,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -41,7 +42,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=PreciseSums
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Most of the time floating point arithmetic does approximately the right thing.  When adding sums or having products of numbers that greatly differ in magnitude, the floating point arithmetic may be incorrect.  This package implements the Kahan (1965) sum <doi:10.1145/363707.363723>, Neumaier (1974) sum <doi:10.1002/zamm.19740540106>,
     pairwise-sum (adapted from 'NumPy', See Castaldo (2008) <doi:10.1137/070679946> for a discussion of accuracy), and arbitrary precision sum (adapted from the fsum in 'Python' ; Shewchuk (1997) <http://www.cs.berkeley.edu/~jrs/papers/robustr.pdf>).  In addition, products are changed to long double precision for accuracy,
     or changed into a log-sum for accuracy.
