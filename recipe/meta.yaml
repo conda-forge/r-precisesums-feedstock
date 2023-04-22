@@ -1,4 +1,4 @@
-{% set version = "0.5" %}
+{% set version = "0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PreciseSums_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PreciseSums/PreciseSums_{{ version }}.tar.gz
-  sha256: fa6a59a2bf6bb8d1b43c1b94bdb1895d8c8fc159552f308a39d0317409dc93a2
+  sha256: f301a321ad05f9f909f5da676273fdd7a50513a693804f5e620e52cdf2f9cc9b
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
